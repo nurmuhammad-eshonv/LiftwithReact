@@ -42,7 +42,7 @@ function App() {
             }}
           >
             <h1 className="text-[40px] text-white text-center">
-              {isDoorOpen ? "Eshik ochiq" : "Eshik yopiq"}
+              {isDoorOpen ? "Eshik yopiq" : "Eshik ochiq"}
               <button
                 onClick={toggleDoor}
                 className="p-5 rounded-[50%] mb-2 bg-blue-600 text-[20px]"
