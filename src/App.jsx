@@ -16,7 +16,7 @@ function App() {
   const toggleDoor = () => {
     setIsDoorOpen(!isDoorOpen);
   };
-
+  
   const moveElevator = (targetFloor) => {
     if (isDoorOpen) {
       if (targetFloor < currentFloor) {
@@ -57,7 +57,7 @@ function App() {
           <ToastContainer />
           <div className="mt-2 flex gap-4">
             <button
-              onClick={() => moveElevator(0)}
+              onClick={() => {moveElevator(0); setIsDoorOpen(false)}}
               className="p-5 rounded-[50%] bg-red-600 text-[15px]"
             >
               7
@@ -72,7 +72,7 @@ function App() {
 
           <div className="mt-10 flex gap-4">
             <button
-              onClick={() => moveElevator(14)}
+              onClick={() => {moveElevator(14) ; setIsDoorOpen(false)}}
               className="p-5 rounded-[50%] bg-red-600 text-[15px] "
             >
               6
@@ -90,7 +90,7 @@ function App() {
 
           <div className="mt-10 flex gap-4">
             <button
-              onClick={() => moveElevator(27)}
+              onClick={() => {moveElevator(27) ;setIsDoorOpen(false)}}
               className="p-5 rounded-[50%] bg-red-600 text-[15px] "
             >
               5
@@ -111,7 +111,7 @@ function App() {
 
           <div className="mt-10 flex gap-4">
             <button
-              onClick={() => moveElevator(40)}
+              onClick={() => {moveElevator(40) ; setIsDoorOpen(false)}}
               className="p-5 rounded-[50%] bg-red-600 text-[15px] "
             >
               4
@@ -132,7 +132,7 @@ function App() {
 
           <div className="mt-10 flex gap-4">
             <button
-              onClick={() => moveElevator(53)}
+              onClick={() => {moveElevator(53); setIsDoorOpen(false)}}
               className="p-5 rounded-[50%] bg-red-600 text-[15px] "
             >
               3
@@ -153,7 +153,7 @@ function App() {
 
           <div className="mt-10 flex gap-4">
             <button
-              onClick={() => moveElevator(66)}
+              onClick={() => {moveElevator(66) ; setIsDoorOpen(false)}}
               className="p-5 rounded-[50%] bg-red-600 text-[15px] "
             >
               2
@@ -174,7 +174,7 @@ function App() {
 
           <div className="mt-10 flex gap-4">
             <button
-              onClick={() => moveElevator(79)}
+              onClick={() => {moveElevator(79); setIsDoorOpen(false)}}
               className="p-5 rounded-[50%] bg-red-600 text-[15px] "
             >
               1
@@ -193,3 +193,5 @@ function App() {
 }
 
 export default App;
+
+
